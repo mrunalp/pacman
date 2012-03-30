@@ -76,14 +76,6 @@ app.get('/game.js', function(req, res){
     serveFile(req, res, 'game.js', {'Content-Type': 'text/javascript'});
 });
 
-app.get('/game.coffee', function(req, res){
-    serveFile(req, res, 'game.coffee', {'Content-Type': 'text/coffeescript'});
-});
-
-app.get('/socket.coffee', function(req, res){
-    serveFile(req, res, 'socket.coffee', {'Content-Type': 'text/coffeescript'});
-});
-
 
 //  Get the environment variables we need.
 var ipaddr  = process.env.OPENSHIFT_INTERNAL_IP;
@@ -151,8 +143,10 @@ process.on('exit', function() { terminator(); });
                                                         {limit: 1});
          if (!coldata) coldata = { }
          if (!coldata.data) {
+            var offsets = { 'clyde': 0,  'blinky': 30, 'inky': 60,
+                            'pinky': 90, 'pacman': 200 };
             coldata.data = { }
-            coldata.data.x = 490 - (ghosts.length * 30);
+            coldata.data.x = 490 - offsets[name];
             coldata.data.y = 220
          }
 
