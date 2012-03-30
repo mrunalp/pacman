@@ -1,15 +1,27 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script id='socketio'></script>
 <script>
-$('#socketio').attr('src', "http://"+document.domain+":8080/socket.io/socket.io.js")
-setTimeout(function(){
-	$('#game').attr('src',"game.js")
-}, 1000)
+$('#socketio').attr('src', "http://"+document.domain+"/socket.io/socket.io.js")
+$(window).load(function(){
+   //your code here
+   $('#game').attr('src',"http://"+document.domain+"/game.js");
+});
+
 </script>
-<audio autoplay='autoplay'  src='pacman.wav'></audio>
+<audio autoplay='autoplay' loop='loop'><source src='pacman.wav' /></audio>
 <canvas id='board' width='1032' height='500' ></canvas>
 <script id='game'></script>
 <style>
+	#debugmsg {
+		display: none;
+		position: absolute;
+		left: 100px;
+		top: 50px;
+		z-index: 100;
+		font-size: 10pt;
+		color: blue;
+	}
+	#full {
 	#message {
 		display: none;
 		position: absolute;
@@ -29,6 +41,7 @@ setTimeout(function(){
 		color: red;
 	}
 </style>
+<div id='debugmsg'></div>
 <div id='message'></div>
 <div id='full'></div>
 
