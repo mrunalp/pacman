@@ -1,0 +1,35 @@
+{
+  "name": "OpenShift-Pac-Man",
+  "version": "1.0.0",
+  "description": "Pac-Man Application on OpenShift",
+  "keywords": [
+    "OpenShift",
+    "Node.js",
+    "application",
+    "pacman"
+  ],
+  "author": {
+    "name": "ramr",
+    "email": "ramr@example.org",
+    "url":  "http://pacman-ramr.rhcloud.com/"
+  },
+  "homepage": "http://pacman-ramr.rhcloud.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://gitub.com/ramr/pacman"
+  },
+
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+
+  "dependencies": {
+    "socket.io": "*"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+
+  "private": true,
+  "main": "server.js"
+}
