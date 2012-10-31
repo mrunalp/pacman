@@ -31,7 +31,7 @@ Create a nodejs-0.6 application (you can name it anything via -a)
 
 Add MongoDB support to your application
 
-    rhc app cartridge add -a pacman -c mongodb-2.0
+    rhc app cartridge add -a pacman -c mongodb-2.2
 
 Add this `github pacman` repository
 
