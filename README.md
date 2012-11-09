@@ -36,7 +36,7 @@ Add MongoDB support to your application
 Add this `github pacman` repository
 
     cd pacman
-    git remote add upstream -m master git@github.com:ramr/pacman.git
+    git remote add upstream -m master git://github.com/ramr/pacman.git
     git pull -s recursive -X theirs upstream master
     
 Then push the repo to OpenShift
