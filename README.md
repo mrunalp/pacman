@@ -1,7 +1,7 @@
-pacman on RedHat's OpenShift PaaS
-=============
+pacman on Red Hat's OpenShift PaaS
+==================================
 This git repository is a sample Node application to help you get started
-with using Node on RedHat's OpenShift PaaS.
+with using Node on Red Hat's OpenShift PaaS.
 
 The app uses canvas and nodejs to render multi-player pacman and uses 
 socket.io ( http://www.socket.io ) to communicate between the players and
