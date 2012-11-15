@@ -125,7 +125,7 @@ process.on('exit', function() { terminator(); });
    });
    socket = io.listen(app);
    socket.configure(function(){
-      socket.set("transports", ["xhr-polling"]);
+      socket.set("transports", ["websocket", "xhr-polling"]);
       socket.set("polling duration", 30);
       // socket.set("log level", 3);
       socket.set("log level", 1);
