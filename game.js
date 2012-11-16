@@ -1,7 +1,7 @@
 (function() {
   var blinky, canvas, checkCollision, checkWin, clear, clyde, controllingPacman, ctx, direction, draw, ensureChannel, ghost, i, imagesLoaded, inky, lastmsgts, losePacman, maze, movePac, movePacInterval, mover, newGhost, newpac, pacLoc, pacLocInterval, pacman, pinky, randDir, randDirInterval, randomlyMovePacman, reset, resetPac, schedule, sendGhostCoords, showMessage, socket, unschedule;
 
-  socket = io.connect(document.domain);
+  socket = io.connect(document.domain + ":7080");
 
   socket.on('connect', function() {
     return console.log('socket connected');
